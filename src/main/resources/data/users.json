@@ -1,0 +1,12 @@
+[
+  {
+    "userId": "u1",
+    "name": "Magesh",
+    "role": "operator"
+  },
+  {
+    "userId": "u2",
+    "name": "Admin User",
+    "role": "admin"
+  }
+]

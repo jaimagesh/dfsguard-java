@@ -1,0 +1,18 @@
+---
+description: DfsGuard project-wide Java and Spring coding standards
+alwaysApply: true
+---
+
+# Project standards
+
+- Use Java 21 features where they improve clarity
+- Use Spring Boot conventions and constructor injection
+- Keep classes small and single-purpose
+- Prefer records for request/response DTOs
+- All Java classes must be under package `com.dfs.dfsguard`
+- Use package structure exactly as described in `docs/01-architecture.md`
+- Use meaningful names like `PolicyEngine`, `GuardService`, `ApprovalService`
+- Avoid unnecessary layers or generic abstractions
+- All externally visible APIs must have request/response DTOs
+- All security-sensitive decisions must produce audit events
+- Add or update tests when changing security logic

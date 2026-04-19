@@ -1,0 +1,4 @@
+Care Operations Playbook
+
+If a case is unresolved, confirm clinical review before closure.
+External emails containing patient details must be approved by a supervisor.

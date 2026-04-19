@@ -1,0 +1,14 @@
+[
+  {
+    "caseId": "CASE-1001",
+    "patientName": "John Doe",
+    "status": "open",
+    "notes": "Follow-up needed on medication refill."
+  },
+  {
+    "caseId": "CASE-1002",
+    "patientName": "Jane Smith",
+    "status": "resolved",
+    "notes": "Lab review complete."
+  }
+]

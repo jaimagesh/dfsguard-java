@@ -1,0 +1,24 @@
+---
+description: DfsGuard architecture and layering constraints
+alwaysApply: true
+---
+
+# Architecture constraints
+
+- Controllers handle HTTP only
+- Services contain orchestration logic
+- Tools perform narrow operations only
+- Policy logic lives only in `PolicyEngine`
+- Prompt and output guards live in dedicated guard/redaction services
+- Repositories only load and persist mock data
+- Unsafe and protected agents must remain separate for demo clarity
+
+## Required main services
+- `UnsafeAgentService`
+- `ProtectedAgentService`
+- `LlmOrchestrator`
+- `RetrievalService`
+- `PolicyEngine`
+- `GuardService`
+- `ApprovalService`
+- `AuditService`

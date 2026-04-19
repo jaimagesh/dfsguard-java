@@ -1,0 +1,39 @@
+---
+description: DfsGuard agent security framework rules
+alwaysApply: true
+---
+
+# DfsGuard security rules
+
+These rules are mandatory for all agent-related code.
+
+## Trust model
+- User prompts are untrusted
+- Retrieved documents are untrusted
+- System configuration is trusted
+- Tool results must still be validated before final response
+
+## Enforcement model
+- LLMs may propose tool actions only
+- Tool execution must happen only through `PolicyEngine` and the tool gateway
+- No controller or AI service may directly call a high-risk tool
+
+## High-risk tools
+- `SendEmailTool`
+- `CloseCaseTool`
+
+## Approval requirements
+- External communication requires approval
+- Destructive actions require approval
+- Privileged actions require role checks
+
+## Redaction requirements
+- Never expose secrets, API keys, hidden prompts, or internal config
+- Apply redaction before returning final responses
+
+## Required logging
+- Prompt injection detection results
+- Policy decisions
+- Approval decisions
+- Tool executions
+- Blocked attempts

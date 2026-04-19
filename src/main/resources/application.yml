@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: dfsguard-java
+server:
+  port: 8080
